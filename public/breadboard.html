@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    
+    <title>Breadboard Projects</title>
+    <meta charset="UTF-8">
+
+    <style>
+      h2 {text-align: center;}
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ 
+ <header>
+    <h2>Breadboard Projects<h2>
+    <hr/>
+ </header>
+
+ <section>
+    <p><h4>Output 1 when 4 bit input is divisible by 3 using 8 to 1 multiplexer (IC 74151) and inverter (IC 7404)</h4></p>
+    <p>The function of this circuit is to output a 1 (F) when the input (a, b, c, d) is divisible by 3. Input 
+      a being the MSB and input d being the LSB. The logic is simplified by comparing the output F to the 
+      least significant input bit d in sections of two inputs. This gives us 8 inputs in terms of d and d' 
+      for the 8 data pins on the 74151 chip, and the inputs a, b, c become the data selection inputs S0, S1,
+      S2, on the 74151. So essentially the data selection is selecting which data input goes to the output.
+      And, the data inputs are just the simplified F = d, F = d', or F = 0 logic expression for each given
+      a, b, c value it corresponds to. The 7404 inverter gives d'.
+    </p>
+ </section>
+  <img src="https://i.pinimg.com/originals/24/ef/b2/24efb2c36f225885520be3851bc4c259.jpg" alt="truth table">
+  <br/>
+  <br/>
+  <img src="https://i.pinimg.com/originals/f2/46/34/f24634a4f8057419fac3957ccb04355a.jpg" alt="breadboard">
+  <br/>
+  <br/>
+  <img src="https://i.pinimg.com/originals/26/40/97/2640978f2ec80f7cce5e8ea0d6ba1e20.jpg" alt="breadboard">
+<br/>
+<br/>
+ <section>
+    <p><h4>Half adder (adds two one bit numbers) using 7486 and 7408</h4></p>
+    <p>The Carry bit is only 1 when the two inputs are both on so they are going through an AND 
+      while the Sum bit is only 1 when either a or b is 1 so a and b go throug an exclusive or (XOR).</p>
+ </section>
+<img src="https://i.pinimg.com/originals/41/a3/d5/41a3d5c5f15c70fdaf2bcfa9ad66e6e6.jpg" alt="breadboard">
+<br/>
+<br/>
+<img src="https://i.pinimg.com/originals/14/30/45/143045618cab61f66a6a48317725f5f1.jpg" alt="breadboard">
+<br/>
+<br/>
+<img src="https://i.pinimg.com/originals/50/de/39/50de395806bc7d6011e3019660826af1.jpg" alt="breadboard">
+
+ 
+
+</body>
+</html>
