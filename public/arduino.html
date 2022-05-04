@@ -38,7 +38,9 @@
   <br/>
   <p><h3>Arduino temperature controlled fan</h3></p>
   <p>Above 80 degrees fahrenheit the fan and on board LED turn on. The temperature is read by 
-  a thermistor which has a varrying resistance based on temperature. The analog input reading is then converted to temperature and displayed by the LCD display. The motor is controlled by an L293D IC and powered by the 9V battery connected
+  a thermistor which has a varying resistance based on temperature. The thermistor is in series with a 10 kOhm 
+  resistor. The thermistor circuit is basically a current divider with a voltage source and two resistors. All resistors vary slightly in resistance 
+  levels at different temperatures, but thermistors are designed to be very sensitive and vary large amounts per degree of temperature change. Usually thermistors used as thermometers have a negative temperature coefficient (NTC). This means the resistance decreases as temperature increases, allowing more current to flow. The analog input pin is connected between the two resistors and reads the input current which is then used to calculate the temperature of the thermistor. This is then displayed by the LCD display. You can increase the thermistors temperature by just pinching it with your fingers. This is a good way to test the thermometer. The motor is controlled by an L293D IC and powered by the 9V battery connected
   to the arduino power supply module.</p>
   <img src="https://i.pinimg.com/originals/88/d6/c9/88d6c94d34691ab27baed98ae8ada203.jpg">
   <br/>
