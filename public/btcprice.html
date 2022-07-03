@@ -1,0 +1,50 @@
+<html>
+   <head>
+      <title>Bitcoin Price</title>
+      
+     
+      <script type="text/javascript">
+                  
+         
+           function bitcoinPrice() {
+         	  var xmlhttp = new XMLHttpRequest();
+         	    var url = "https://api.coindesk.com/v1/bpi/currentprice.json";
+         
+         	    xmlhttp.onreadystatechange = function() {
+         	      if (this.readyState == 4  &&  this.status == 200) {
+         	        var json = JSON.parse(this.responseText);
+         	        parseJson(json);
+         	      }		
+         	    };
+         
+         	    xmlhttp.open("GET", url, true);
+         	    xmlhttp.send();
+           }
+         
+         
+           function parseJson(json) {
+               var time = "on " + json["time"]["updated"];
+               var usdValue = json["bpi"]["USD"]["rate"];
+               
+         
+               
+               document.getElementById("content").innerHTML = usdValue;
+               document.getElementById("time").innerHTML = time;
+               
+         
+               // we call back in 60 seconds
+               setTimeout(bitcoinPrice, 60000);
+           }
+
+           
+         
+      </script>
+      
+   </head>
+   <body onLoad="bitcoinPrice();">
+   	  
+   	  <div id="time"></div>
+      <div>BTC/USD <span id="content"></span></div>
+      <div>From  <a href="https://www.coindesk.com/" target="_blank">coindesk.com</a></div>
+   </body>
+</html>	
